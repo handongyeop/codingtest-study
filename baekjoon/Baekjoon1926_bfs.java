@@ -3,7 +3,7 @@ package baekjoon;
 import java.io.*;
 import java.util.*;
 
-public class Baekjoon1926 {
+public class Baekjoon1926_bfs {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -15,6 +15,7 @@ public class Baekjoon1926 {
         int arr[][] = new int[n][m];
         // 중복 방지
         boolean visit[][] = new boolean[n][m];
+        // bfs를 구현할 큐 생성
         Queue<Pair> q = new LinkedList<>();
         int cnt = 0;
         int area;
@@ -36,9 +37,9 @@ public class Baekjoon1926 {
                     continue;
                 }
                 cnt++;    // 시작점 인식, 그림의 개수 카운팅
+                area = 0;    // 넓이 초기화
                 q.offer(new Pair(i, j));   // 큐에 좌표를 넣어준다.
                 visit[i][j] = true;     // 중복 처리!
-                area = 0;    // 넓이 초기화
                 while(!q.isEmpty()){
                     Pair p = q.poll();
                     area++; // 넓이 +1
