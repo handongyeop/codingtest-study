@@ -2,10 +2,7 @@ package baekjoon;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Baekjoon7785 {
     public static void main(String[] args) throws Exception {
@@ -27,8 +24,8 @@ public class Baekjoon7785 {
                 hs.remove(name);
             }
         }
-        ArrayList<String> al = new ArrayList(hs);
-        Collections.sort(al, Collections.reverseOrder());
+        ArrayList<String> al = new ArrayList<>(hs);
+        al.sort(Comparator.reverseOrder());
 
         for (String i : al) {
             sb.append(i).append("\n");
