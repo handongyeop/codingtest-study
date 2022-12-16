@@ -34,6 +34,7 @@ public class Baekjoon7662 {
                     // num의 value가 1이면 remove()
                     que.put(num, que.get(num) - 1);
                     if (que.get(num) == 0) que.remove(num);
+
                 }
             }
 
