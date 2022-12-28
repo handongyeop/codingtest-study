@@ -55,7 +55,7 @@ public class Baekjoon1753 {
             Node now = pq.poll();
 
             int len = graph[now.v].size();
-            for(int i = 0; i<len; i++){
+            for(int i = 0; i < len ; i++){
                 Node next = (Node)graph[now.v].get(i);
 
                 if(dist[next.v]>now.w + next.w){
