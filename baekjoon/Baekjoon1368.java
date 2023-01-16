@@ -47,9 +47,9 @@ public class Baekjoon1368 {
         System.out.println(answer);
     }
 
-    private static void union(int v1, int v2) {
-        int p1 = find(v1);
-        int p2 = find(v2);
+    private static void union(int s, int e) {
+        int p1 = find(s);
+        int p2 = find(e);
         if (p1 > p2) {
             parents[p1] = p2;
         } else {
